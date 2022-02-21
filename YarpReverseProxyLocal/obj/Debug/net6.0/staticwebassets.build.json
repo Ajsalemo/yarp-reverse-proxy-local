@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "whsucCk4wihq1aR9hqmS/18XkDBNSj/+yQC2pxByYUs=",
+  "Source": "YarpReverseProxyLocal",
+  "BasePath": "_content/YarpReverseProxyLocal",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "X47DWB9k20xfQUvF8j+ZwHc+boosRsDYYqrMKjevtcW1LF8JLkRgER7281Z3PfL0DzSezmoU/OpEfB63ibRX4w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ansalemo\\OneDrive - Microsoft\\Documents\\Code\\Github\\yarp-reverse-proxy-local\\YarpReverseProxyLocal\\YarpReverseProxyLocal.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ansalemo\\.nuget\\packages\\yarp.reverseproxy\\1.0.0\\yarp.reverseproxy.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
