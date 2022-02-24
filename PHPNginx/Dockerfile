@@ -1,5 +1,7 @@
 FROM php:8.1.3-apache
 
-COPY index.php /var/www/html/
+COPY . /var/www/html/
 
-EXPOSE 8080
+RUN docker-php-ext-install pdo_mysql
+
+EXPOSE 80
