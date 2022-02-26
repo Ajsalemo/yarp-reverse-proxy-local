@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  yarp:
+    image: yarp-reverse-proxy-local_yarp:latest
+    container_name: 'yarp-reverseproxy-container'
+    build: 
+      context: './YarpReverseProxyLocal'
+      dockerfile: 'Dockerfile'
+    ports:
+      - "5000:5000"
+    networks:
+      - proxynet
+
+  php-apache:
+    image: yarp-reverse-proxy-local_php-apache:latest
+    container_name: 'phpapache-container'
+    build:
+      context: './PHPApache'
+      dockerfile: 'Dockerfile'
+    ports:
+      - "8080:80"
+    networks:
+      - proxynet
+
+networks:
+  proxynet:

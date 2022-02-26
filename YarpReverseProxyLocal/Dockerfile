@@ -12,9 +12,8 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0
 ENV ASPNETCORE_URLS=http://+:5000
 WORKDIR /app
 COPY --from=build /app/out .
-
-COPY sshd_config /etc/ssh/
-COPY init_container.sh /opt/
+COPY --from=build /app/sshd_config /etc/ssh/
+COPY --from=build /app/init_container.sh /opt/
 
 # Start and enable SSH
 ENV SSH_PASSWD "root:Docker!"
