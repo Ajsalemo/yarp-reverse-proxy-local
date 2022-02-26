@@ -1,13 +1,10 @@
 <?php
 
-require_once("./config.php");
-require_once("./todo.php");
+require_once("./weather.php");
 
-$conn = new PDO("mysql:host=$mysqlHost;dbname=$mysqlDatabase", $mysqlUsername, $mysqlPassword);
-$todo = new Todo();
+$lat = "40.71455";
+$lng = "-74.00712";
 
-$todo->connect($conn);
-$todo->selectAllQueryMethod();
+$weatherForecast = new WeatherForecast($lat, $lng);
 
-// Close the connection after use
-$conn = null;
+$weatherForecast->getCurrentWeatherPerCity();
