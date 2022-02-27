@@ -2,9 +2,21 @@
 
 require_once("./weather.php");
 
-$lat = "40.71455";
-$lng = "-74.00712";
+// New York City lat/lng coordinates
+$newYorkLat = "40.71455";
+$newYorkLng = "-74.00712";
 
-$weatherForecast = new WeatherForecast($lat, $lng);
+// Tokyo lat/lng coordinates
+$tokyoLat = "35.68321";
+$tokyoLng = "139.80894";
 
-$weatherForecast->getCurrentWeatherPerCity();
+// Paris lat/lng coordinates
+$parisLat = "48.863186";
+$parisLng = "2.339754";
+
+// Open Weather Map API key
+$openWeatherMapApiKey = getenv("OPEN_WEATHER_MAP_API_KEY");
+
+$weatherForecast = new WeatherForecast($openWeatherMapApiKey, $newYorkLat, $newYorkLng, $tokyoLat, $tokyoLng, $parisLat, $parisLng);
+
+$weatherForecast->getCurrentWeatherForNewYork();
