@@ -1,6 +1,6 @@
 FROM php:8.1.3-apache
 
-COPY index.php config.php todo.php /var/www/html/
+COPY index.php weather.php /var/www/html/
 # Start and enable SSH
 ENV SSH_PASSWD "root:Docker!"
 RUN apt-get update \
