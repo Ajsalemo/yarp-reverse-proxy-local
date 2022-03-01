@@ -45,7 +45,6 @@ class WeatherForecast
         $response = curl_exec($curl);
         // Close the cURL session
         curl_close($curl);
-        // Push the response to the specified city array
         $jsonRes = json_decode($response);
 
         // Send back a structured response
