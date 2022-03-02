@@ -28,7 +28,7 @@ class WeatherForecast
     // This is so we don't have to keep creating a separate variable per city for the endpoint
     public function constructApiEndpointForCity($lat, $lng)
     {
-        $openWeatherMapEndpoint = "api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$lng&units=imperial&appid=$this->openWeatherMapApiKey";
+        $openWeatherMapEndpoint = "https://api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$lng&units=imperial&appid=$this->openWeatherMapApiKey";
         return $openWeatherMapEndpoint;
     }
 
