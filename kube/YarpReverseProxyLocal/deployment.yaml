@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yarp-proxy-net6-deployment
+  labels:
+    app: yarp-proxy-net6
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: yarp-proxy-net6
+  template:
+    metadata:
+      labels:
+        app: yarp-proxy-net6
+    spec:
+      containers:
+      - name: yarp-proxy-net6
+        imagePullPolicy: IfNotPresent
+        image: yarpreverseproxylocal:latest
+        ports:
+        - containerPort: 5000
