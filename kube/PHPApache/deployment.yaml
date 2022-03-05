@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: php-apache-deployment
+  labels:
+    app: php-apache
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: php-apache
+  template:
+    metadata:
+      labels:
+        app: php-apache
+    spec:
+      containers:
+      - name: php-apache
+        imagePullPolicy: IfNotPresent
+        image: yarpreverseproxylocal-php:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: OPEN_WEATHER_MAP_API_KEY
+          value: <value>
