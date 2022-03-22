@@ -1,6 +1,6 @@
 # yarp-reverse-proxy-local
 
-A small sample using [Yarp](https://microsoft.github.io/reverse-proxy/). This proxies from the Yarp application (.NET 6) running on localhost:5000 to a PHP 8 Docker Container that would run on localhost:80.
+A small sample using [Yarp](https://microsoft.github.io/reverse-proxy/). This proxies from the Yarp application (.NET 6) running on localhost:5000 to a PHP 8 Docker Container that would run on localhost:80. This can also be ran in a Kubernetes environment with the service and deployment `.yaml` files under the `/kube` folder in this repository.
 
 This can be used with docker-compose or running as separate 'single' contains with the use of a user-created network so Yarp can call the upstream service by container name, such as below:
 
