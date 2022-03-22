@@ -1,6 +1,8 @@
 FROM php:8.1.3-apache
 
 COPY index.php weather.php /var/www/html/
+COPY init_container.sh /opt/
+
 # Start and enable SSH
 ENV SSH_PASSWD "root:Docker!"
 RUN apt-get update \
@@ -8,7 +10,8 @@ RUN apt-get update \
     && apt-get update \
     && apt-get install -y --no-install-recommends openssh-server \
     && docker-php-ext-install pdo_mysql \
-    && echo "$SSH_PASSWD" | chpasswd 
+    && echo "$SSH_PASSWD" | chpasswd \
+    && chmod +x /opt/init_container.sh
 
 COPY sshd_config /etc/ssh/
 
